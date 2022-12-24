@@ -1,0 +1,132 @@
+:root {
+    --bg-main: hsl(217, 54%, 11%);
+    --bg-card: hsl(216, 50%, 16%);
+    --bg-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+}
+
+* {
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+}
+
+body {
+    background-color: var(--bg-main);
+    padding: 20px;
+}
+
+.card {
+    width: 25%;
+    background-color: red;
+    margin: auto;
+    margin-top: 30px;
+    background-color: var(--bg-card);
+    padding: 20px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+}
+
+.card h1 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--White);
+}
+
+.card h1:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+.nft-img img {
+    max-width: 100%;
+    border: 1px solid transparent;
+    border-radius: 10px;
+}
+
+p {
+    color: var(--Soft-blue);
+}
+
+.card-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-info .price {
+    color: var(--Cyan);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.card-info .time {
+    color: var(--Soft-blue);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+hr {
+    border: 1px solid var(--bg-line);
+    width: 90%;
+}
+
+.avater {
+    display: flex;
+    align-items: center;
+}
+
+.avater>img {
+    max-width: 35px;
+    margin-right: 15px;
+    border: 2px solid var(--White);
+    border-radius: 50%;
+}
+
+.avater .title {
+    color: var(--Soft-blue);
+}
+
+.avater .name {
+    color: var(--White);
+}
+
+.avater .name:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+
+}
+
+@media screen and (max-width: 375px) {
+    .card {
+        width: fit-content;
+    }
+}
+
+.nft-img {
+    position: relative;
+}
+
+.icon {
+    position: absolute;
+    background-color: hsl(178, 100%, 50%,50%);
+    height: 100%;
+    width: 100%;
+    opacity: .7;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    display: none;
+}
+
+.nft-img:hover .icon{
+    display: block;
+    cursor: pointer;
+}
+
+.icon-view {
+    padding: 0px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
